@@ -8,10 +8,11 @@ export default function Home() {
   };
   return (
     <div className={styles.container}>
-      <Head></Head>
+      <Head>
+        <title>Coffee Connoisseur</title>
+      </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Coffee Connoisseur</h1>
         <Banner
           buttonText="View Stores nearby"
           handleOnclick={handleOnBannerBtnClick}
