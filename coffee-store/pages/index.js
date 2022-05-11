@@ -1,8 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Banner from "../components/banner/Banner";
-import Image from "next/image";
 import Card from "../components/card/Card";
+import coffeeStores from "../data/coffee-stores.json";
 
 export default function Home() {
   const handleOnBannerBtnClick = () => {
@@ -20,42 +20,14 @@ export default function Home() {
           handleOnclick={handleOnBannerBtnClick}
         />
         <div className={styles.cardLayout}>
-          <Card
-            name="coffee shop 1"
-            className={styles.card}
-            imgUrl="/../public/static/coffee-shops/1.jpg"
-            href="/coffee-store/first coffee"
-          />
-          <Card
-            name="coffee shop 1"
-            className={styles.card}
-            imgUrl="/../public/static/coffee-shops/1.jpg"
-            href="/coffee-store/first coffee"
-          />
-          <Card
-            name="coffee shop 1"
-            className={styles.card}
-            imgUrl="/../public/static/coffee-shops/1.jpg"
-            href="/coffee-store/first coffee"
-          />
-          <Card
-            name="coffee shop 1"
-            className={styles.card}
-            imgUrl="/../public/static/coffee-shops/1.jpg"
-            href="/coffee-store/first coffee"
-          />
-          <Card
-            name="coffee shop 1"
-            className={styles.card}
-            imgUrl="/../public/static/coffee-shops/1.jpg"
-            href="/coffee-store/first coffee"
-          />
-          <Card
-            name="coffee shop 1"
-            className={styles.card}
-            imgUrl="/../public/static/coffee-shops/1.jpg"
-            href="/coffee-store/first coffee"
-          />
+          {coffeeStores.map((coffee) => (
+            <Card
+              name={coffee.name}
+              className={styles.card}
+              imgUrl={coffee.imgUrl}
+              href={`/coffee-store/${coffee.id}`}
+            />
+          ))}
         </div>
       </main>
     </div>
