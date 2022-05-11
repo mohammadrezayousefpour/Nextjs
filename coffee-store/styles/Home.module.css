@@ -17,6 +17,8 @@
   position: absolute;
   top: 0px;
   z-index: 1;
+  top: 40%;
+  /* left: 50%; */
 }
 
 .cardLayout {

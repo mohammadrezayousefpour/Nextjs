@@ -18,11 +18,13 @@ export default function Home() {
           buttonText="View Stores nearby"
           handleOnclick={handleOnBannerBtnClick}
         />
-        <Image
-          src="/static/3.1 hero-image.png"
-          width={700}
-          height={400}
-        ></Image>
+        <div className={styles.heroImage}>
+          <Image
+            src="/static/3.1 hero-image.png"
+            width={700}
+            height={400}
+          ></Image>
+        </div>
       </main>
     </div>
   );
