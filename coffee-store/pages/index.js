@@ -5,7 +5,6 @@ import Card from "../components/card/Card";
 import coffeeStores from "../data/coffee-stores.json";
 
 export async function getStaticProps(context) {
-  console.log("server side");
   return {
     props: {
       coffeeStoresPorps: coffeeStores,
@@ -14,8 +13,6 @@ export async function getStaticProps(context) {
 }
 
 export default function Home(props) {
-  console.log("client side");
-  console.log(props);
   const handleOnBannerBtnClick = () => {
     console.log("hello my friend");
   };
